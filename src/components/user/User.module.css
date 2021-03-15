@@ -1,0 +1,20 @@
+.profile_pic {
+  border-radius: 50%;
+}
+.profile_pic_Row {
+  justify-content: center;
+  text-align: center;
+}
+.userContainer {
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 3px;
+  background-color: rgba(100, 148, 237, 0.623);
+}
+
+.intros {
+  justify-content: center;
+  text-align: center;
+}

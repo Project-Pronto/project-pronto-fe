@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap'
 import LoginButton from '../../components/auth0/LoginButton'
+import LogOutButton from '../../components/auth0/LogOutButton'
+import {useAuth0} from '@auth0/auth0-react'
 
-export default class NavMenu extends Component {
-    render() {
+export default function NavMenu()  {
+    
+      const { isAuthenticated } = useAuth0();
         return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Navbar.Brand href="/">PROJECT PRONTO</Navbar.Brand>
@@ -14,10 +17,10 @@ export default class NavMenu extends Component {
       <Nav.Link href="/task">Task</Nav.Link>
     </Nav>
     <Nav>
-      <LoginButton></LoginButton>
+    {isAuthenticated ? <LogOutButton/> :<LoginButton/>}
     </Nav>
   </Navbar.Collapse>
 </Navbar>
         )
     }
-}
+
