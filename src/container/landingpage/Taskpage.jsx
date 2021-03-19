@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Container, Button, Collapse, Modal, Row} from 'react-bootstrap';
+import { Container, Button, Collapse, Modal, Row, Col} from 'react-bootstrap';
 import Tasks from '../../data/Data';
 import styles from './Task.module.css';
 
@@ -17,10 +17,13 @@ export default function TaskPage() {
         
       <Container className={styles.myTask_container}>
             <Container className={styles.task_heading}>
-                <Row className={styles.myTask_heading}>My Tasks</Row> 
-                <Row><button className={styles.taskButton} onClick={handleShow}>
+                <Row >
+                  <Col className={styles.myTask_heading}>
+                  <p>My Tasks</p>
+                  <button className={styles.taskButton} onClick={handleShow}>
                   New +
-                </button></Row>
+                </button></Col>
+                </Row> 
             </Container>
             
             <Container className={styles.allTasks}>
