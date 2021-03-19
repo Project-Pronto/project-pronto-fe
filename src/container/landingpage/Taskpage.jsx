@@ -26,7 +26,7 @@ export default function TaskPage() {
             <Container className={styles.allTasks}>
                 {Tasks.map(task =>
                 <Container className={styles.task_container} key={task.goal}>
-                    <Row>
+                    <Row >
                       <div className={styles.goal_deadline}>
                         <p>{task.goal}</p>
                         <p>{task.deadline}</p>
