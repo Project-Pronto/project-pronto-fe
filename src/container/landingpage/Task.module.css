@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.task_container {
+  border-radius: 10px;
+  border: none;
+  background-color: #44546c;
+  margin-top: 10px;
+  color: white;
+  width: 280px;
+}
+.steps_button {
+  display: flex;
+  justify-content: space-between;
+}
+.myTask_heading {
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.task_heading {
+  display: flex;
+  padding-top: 5px;
+  width: 330px;
+  justify-content: space-between;
+}
+
+.taskButton {
+  background: #ff5c61;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.myTask_container {
+  border-radius: 10px;
+  padding: 0px;
+  background-color: #293547;
+  border-radius: 10px;
+  justify-content: center;
+  width: 340px;
+}
+ul {
+  padding-inline-start: 0px;
+}
+.stepsComplete {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.goal_deadline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.allTasks {
+  margin-top: 5px;
+  border-radius: 10px;
+  justify-self: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding-inline-start: 0px;
+  width: 280px;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+}

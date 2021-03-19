@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.profile_pic_Row {
+  justify-content: center;
+}
+.userContainer {
+  width: 340px;
+  height: 202px;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 3px;
+  background-color: #293547;
+}
+
+.intros {
+  padding-top: 2%;
+  padding-left: 8%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #ffffff;
+}
