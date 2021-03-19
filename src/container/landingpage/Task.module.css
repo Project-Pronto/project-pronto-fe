@@ -32,6 +32,8 @@
   background: #ff5c61;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  border: none;
+  color: white;
 }
 
 .myTask_container {
@@ -56,6 +58,7 @@ ul {
 .goal_deadline {
   display: flex;
   justify-content: space-between;
+  width: 270px;
 }
 
 .allTasks {
