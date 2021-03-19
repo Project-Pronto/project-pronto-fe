@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.Nav {
+  background-color: #19222f;
+}
+
+.NavText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+
+  text-align: right;
+}

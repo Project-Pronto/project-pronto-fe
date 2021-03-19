@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.LogOutButton {
+  border: none;
+  background-color: transparent;
+  color: white;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+
+  text-align: right;
+}

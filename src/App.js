@@ -1,11 +1,13 @@
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
-import NavMenu from './container/sitenav/NavMenu'
-import HomePage from './container/homepage/HomePage'
+import './App.module.css';
+import NavMenu from './container/sitenav/NavMenu';
+import HomePage from './container/homepage/HomePage';
+
+
 
 
 
