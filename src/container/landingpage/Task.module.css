@@ -10,6 +10,8 @@
 .steps_button {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 280px;
 }
 .myTask_heading {
   display: flex;
@@ -61,6 +63,7 @@ ul {
   padding-inline-start: 0px;
 }
 .stepsComplete {
+  padding-left: 5px;
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -69,9 +72,15 @@ ul {
 }
 
 .goal_deadline {
+  padding-top: 5px;
+  padding-left: 5px;
   display: flex;
   justify-content: space-between;
-  width: 270px;
+  width: 280px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .allTasks {
@@ -82,10 +91,22 @@ ul {
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  width: 270px;
+  width: 280px;
 }
 
 .steps {
   display: flex;
   align-items: center;
+}
+
+.stepsButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  display: flex;
+  justify-self: flex-start;
 }
