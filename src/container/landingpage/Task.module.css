@@ -6,26 +6,30 @@
   background-color: #44546c;
   margin-top: 10px;
   color: white;
-  width: 280px;
 }
 .steps_button {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 280px;
 }
 .myTask_heading {
+  display: flex;
   color: white;
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
+  width: 340px;
+  padding-top: 5px;
+  justify-content: space-between;
 }
 
 .task_heading {
-  display: flex;
-  padding-top: 5px;
-  width: 330px;
-  justify-content: space-between;
+  width: 300px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .taskButton {
@@ -34,20 +38,32 @@
   border-radius: 8px;
   border: none;
   color: white;
+  width: 67px;
+  height: 31px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .myTask_container {
   border-radius: 10px;
-  padding: 0px;
+  margin: 0px;
   background-color: #293547;
   border-radius: 10px;
-  justify-content: center;
   width: 340px;
 }
 ul {
   padding-inline-start: 0px;
 }
 .stepsComplete {
+  padding-left: 5px;
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
@@ -56,25 +72,41 @@ ul {
 }
 
 .goal_deadline {
+  padding-top: 5px;
+  padding-left: 5px;
   display: flex;
   justify-content: space-between;
-  width: 270px;
+  width: 280px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .allTasks {
   margin-top: 5px;
   border-radius: 10px;
-  justify-self: center;
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  padding-inline-start: 0px;
   width: 280px;
 }
 
 .steps {
   display: flex;
   align-items: center;
+}
+
+.stepsButton {
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  display: flex;
+  justify-self: flex-start;
 }

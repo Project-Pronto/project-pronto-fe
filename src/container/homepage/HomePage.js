@@ -16,7 +16,7 @@ export default function HomePage() {
                 <Col>{isAuthenticated ? <User/> : <Container className={styles.heading_container}><h2 className={styles.heading}>FINI</h2></Container>}</Col>
             </Row>
             <Row>
-                {isAuthenticated? <TaskPage/> : <br></br> }
+                {isAuthenticated? <Container><TaskPage/> </Container>: <br></br> }
             </Row>
             
         </Container>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Container, Button, Collapse, Modal, Row} from 'react-bootstrap';
+import { Container, Button, Collapse, Modal, Row, Col} from 'react-bootstrap';
 import Tasks from '../../data/Data';
 import styles from './Task.module.css';
 
@@ -17,16 +17,20 @@ export default function TaskPage() {
         
       <Container className={styles.myTask_container}>
             <Container className={styles.task_heading}>
-                <Row className={styles.myTask_heading}>My Tasks</Row> 
-                <Row><button className={styles.taskButton} onClick={handleShow}>
-                  New +
-                </button></Row>
+                <Row >
+                  <Col className={styles.myTask_heading}>
+                    <p>My Tasks</p>
+                    <button className={styles.taskButton} onClick={handleShow}>
+                      New +
+                    </button>
+                  </Col>
+                </Row> 
             </Container>
             
             <Container className={styles.allTasks}>
                 {Tasks.map(task =>
                 <Container className={styles.task_container} key={task.goal}>
-                    <Row >
+                    <Row>
                       <div className={styles.goal_deadline}>
                         <p>{task.goal}</p>
                         <p>{task.deadline}</p>
@@ -37,10 +41,12 @@ export default function TaskPage() {
                         {task.steps.filter(step => step.completed === true).length}/3 complete
                       </p>
                       <Button
+                        className={styles.stepsButton}
                         onClick={() => setOpen(!open)}
                         aria-controls={`task ${task.goal}`}
                         aria-expanded={open}>
-                        ^
+                        	
+                        &#748;
                       </Button>
                     </Row>
                     

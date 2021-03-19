@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 .profile_pic_Row {
+  justify-self: flex-start;
+  width: 340px;
   justify-content: center;
 }
 .userContainer {
+  display: grid;
   width: 340px;
   height: 202px;
   align-self: center;
@@ -12,16 +15,100 @@
   margin: 5px;
   padding: 3px;
   background-color: #293547;
+  justify-content: center;
 }
 
 .intros {
+  width: 280px;
+  display: grid;
   padding-top: 2%;
-  padding-left: 8%;
   font-family: Inter;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
-
+  justify-self: center;
   color: #ffffff;
+}
+
+.task_Row {
+  width: 280px;
+  height: 98px;
+  color: white;
+  background-color: #44546c;
+  border-radius: 10px;
+  border: none;
+  justify-content: center;
+}
+.metricContainer {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.taskMetrics {
+  color: white;
+  background-color: #44546c;
+  width: 290px;
+  border-radius: 10px;
+  border: none;
+  justify-self: center;
+}
+
+.metricTop {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+
+.col_active {
+  text-align: center;
+  border-right: 1px white solid;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.col_done {
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+.col_missed {
+  border-left: 1px white solid;
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.col_task_tracker {
+  justify-self: flex-start;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.col_task_points {
+  display: flex;
+  justify-content: flex-end;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
 }
