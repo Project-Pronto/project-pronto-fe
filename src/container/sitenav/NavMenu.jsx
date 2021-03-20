@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 import LogOutButton from '../../components/auth0/LogOutButton'
 import {useAuth0} from '@auth0/auth0-react'
 import styles from './NavMenu.module.css'
