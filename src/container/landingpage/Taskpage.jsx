@@ -7,7 +7,6 @@ export default function TaskPage() {
 
     const [open, setOpen] = useState(false);
     const [show, setShow] = useState(false);
-    // const [points, setPoints] = useState(0);
     
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);

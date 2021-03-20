@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 .row_user_logo {
-  display: flex;
   justify-content: center;
 }
 
