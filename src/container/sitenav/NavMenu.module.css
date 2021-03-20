@@ -1,18 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 .Nav {
+  height: 70px;
   background-color: #19222f;
 }
 
 .NavText {
+  display: flex;
+  justify-content: space-between;
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
   line-height: 36px;
-  text-align: right;
+  width: 100%;
 }
 
 .headerText {
   color: #ff5c61;
+}
+
+.logo {
+  position: absolute;
+  top: 0%;
+  width: 50%;
+  left: -5%;
 }
