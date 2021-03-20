@@ -6,11 +6,16 @@ import { Container, Row, } from 'react-bootstrap';
 import TaskPage from '../landingpage/Taskpage';
 import logo from '../../assets/main_logo.png'
 import LoginButton from '../../components/auth0/LoginButton';
+import Loading from '../../assets/loading.gif';
 
 
 export default function HomePage() {
+    const { isLoading } = useAuth0()
     
     const { isAuthenticated } = useAuth0();
+
+    if (isLoading) return <img  src={Loading} alt="loading" width="100%"/>;
+
     return (
         
         <Container>
