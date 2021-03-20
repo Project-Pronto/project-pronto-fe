@@ -6,6 +6,7 @@
   background-color: #44546c;
   margin-top: 10px;
   color: white;
+  justify-content: center;
 }
 .steps_button {
   display: flex;

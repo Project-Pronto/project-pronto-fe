@@ -1,7 +1,7 @@
 let  Tasks = [
    
     {
-        completed:false,
+        completed:true,
         goal:"Complete online shop orders from last week",
         deadline: "3/2/2021",
         steps: [
@@ -33,7 +33,7 @@ let  Tasks = [
                             
     },
     {
-        completed:false,
+        completed:true,
         goal:"Finish Science Project",
         deadline: "3/2/2021",
         steps: [
