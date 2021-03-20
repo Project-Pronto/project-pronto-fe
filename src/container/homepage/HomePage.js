@@ -5,6 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Container, Row, } from 'react-bootstrap';
 import TaskPage from '../landingpage/Taskpage';
 import logo from '../../assets/main_logo.png'
+import LoginButton from '../../components/auth0/LoginButton';
 
 
 export default function HomePage() {
@@ -14,7 +15,10 @@ export default function HomePage() {
         
         <Container>
             <Row className={styles.row_user_logo}>
-                {isAuthenticated ? <User/> : <img className={styles.heading} src={logo} alt="logo"/>}
+                {isAuthenticated ? <User/> : <>
+                    <img className={styles.heading} src={logo} alt="logo"/>
+                    <LoginButton />
+                    </>}
             </Row>
             <Row>
                 {isAuthenticated? <Container><TaskPage/> </Container>: <br></br> }
