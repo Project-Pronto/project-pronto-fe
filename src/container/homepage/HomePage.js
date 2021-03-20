@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './HomePage.module.css';
 import User from '../../components/user/User';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, } from 'react-bootstrap';
 import TaskPage from '../landingpage/Taskpage';
+import logo from '../../assets/main_logo.png'
 
 
 export default function HomePage() {
@@ -12,8 +13,8 @@ export default function HomePage() {
     return (
         
         <Container>
-            <Row>
-                <Col>{isAuthenticated ? <User/> : <Container className={styles.heading_container}><h2 className={styles.heading}>FINI</h2></Container>}</Col>
+            <Row className={styles.row_user_logo}>
+                {isAuthenticated ? <User/> : <img className={styles.heading} src={logo} alt="logo"/>}
             </Row>
             <Row>
                 {isAuthenticated? <Container><TaskPage/> </Container>: <br></br> }

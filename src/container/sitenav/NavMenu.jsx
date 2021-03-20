@@ -10,12 +10,16 @@ export default function NavMenu()  {
       const { isAuthenticated } = useAuth0();
         return (
             <Navbar className={styles.Nav} collapseOnSelect expand="lg"  variant="dark">
-  <Navbar.Brand className={styles.NavText} href="/">FINI</Navbar.Brand>
-    <Nav>
-    {isAuthenticated ? <LogOutButton/> :<LoginButton/>}
-    </Nav>
+              <Navbar.Brand className={styles.NavText} href="/">
+                <h1 className={styles.headerText}>
+                  VOLTOOI
+                </h1>
+              </Navbar.Brand>
+                <Nav>
+                  {isAuthenticated ? <LogOutButton/> :<LoginButton/>}
+                </Nav>
   
-</Navbar>
+            </Navbar>
         )
     }
 
