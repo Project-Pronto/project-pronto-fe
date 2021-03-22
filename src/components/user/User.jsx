@@ -1,22 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import {TaskContext} from '../../context/TaskContext'
+
+// import React, { useState, useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './User.module.css';
-import Tasks from '../../data/Data'
+// import Tasks from '../../data/Data'
 
 const  User = () => {
 
         const { user } = useAuth0()
-        const [tasks, setTasks] = useState([])
+        // const [tasks, setTasks] = useState([])
+        const { tasks } = useContext(TaskContext)
 
         const activeTasks = tasks.filter(task => task.completed === false).length;
         const doneTasks = tasks.filter(task => task.completed ===  true ).length;
         const totalPoints = doneTasks * 3;
        
-        useEffect(() => {
-            setTasks(Tasks);
+        // useEffect(() => {
+        //     setTasks(Tasks);
               
-          }, [tasks]);
+        //   }, [tasks]);
 
         return (
             <Container className={styles.userContainer}>

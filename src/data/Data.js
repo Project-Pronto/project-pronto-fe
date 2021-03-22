@@ -17,7 +17,7 @@ let  Tasks = [
                             
     },
     {
-        completed:true,
+        completed:false,
         goal:"Write Essay",
         deadline: "4/1/2021",
         steps: [
@@ -47,10 +47,46 @@ let  Tasks = [
         ]
                 
                             
+    },
+    {
+        completed:false,
+        goal:"Finish Science Project",
+        deadline: "3/2/2021",
+        steps: [
+            {task: "Finish Thesis",
+            completed: false},
+            {task:"Write paper",
+            completed:false},
+            {task:"Write speech",
+            completed: false}
+
+        ]
+                
+                            
     }
             
         
 ]
+
+
+// [{
+//     completed:false,
+//     goal:"Finish Science Project",
+//     deadline: "3/2/2021",
+//     task1: [
+//         {task:"Finish Thesis",
+//         completed: false}
+//         ],
+//     task2: [
+//         {task:"Write paper",
+//         completed:false}
+//     ],
+//     task3: [
+//         {task:"Write paper",
+//         completed:false}
+//     ]
+// }
+// ]
 
 
 export default Tasks;

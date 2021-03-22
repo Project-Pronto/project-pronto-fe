@@ -6,6 +6,7 @@ import {
 import './App.module.css';
 import NavMenu from './container/sitenav/NavMenu';
 import HomePage from './container/homepage/HomePage';
+import {TaskProvider} from '../src/context/TaskContext'
 
 
 
@@ -14,12 +15,14 @@ import HomePage from './container/homepage/HomePage';
 function App() {
   return (
     <>
-    <Router>
+    <TaskProvider>
+      <Router>
       <NavMenu></NavMenu>
         <Switch>
           <Route exact path="/" component={HomePage} />
         </Switch>
       </Router>
+    </TaskProvider>
     </>
   );
 }
