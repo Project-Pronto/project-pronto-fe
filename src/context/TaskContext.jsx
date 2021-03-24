@@ -10,8 +10,9 @@ export const TaskProvider = ({ children }) => {
   const [totalPoints, setTotalPoints] = useState(0)
  
   
-  
-   
+   const handleSetTask = () => {
+     setTasks()
+   }
 
   const handleNewTask = async(newTask) => {
     allTasks.push(newTask)
@@ -24,7 +25,7 @@ export const TaskProvider = ({ children }) => {
 
   
   return (
-    <TaskContext.Provider value={{ allTasks, activeTasks, doneTasks,totalPoints, handleNewTask }}>
+    <TaskContext.Provider value={{ allTasks, activeTasks, doneTasks,totalPoints, handleNewTask, handleSetTask }}>
       {children}
     </TaskContext.Provider>
   );
