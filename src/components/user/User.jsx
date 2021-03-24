@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import {TaskContext} from '../../context/TaskContext'
+
+// import React, { useState, useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './User.module.css';
-import Tasks from '../../data/Data'
+// import Tasks from '../../data/Data'
 
 const  User = () => {
 
-        const { user } = useAuth0()
-        const [tasks, setTasks] = useState([])
+        const { user } = useAuth0();
+        // const [tasks, setTasks] = useState([])
+        const { activeTasks, doneTasks, totalPoints } = useContext(TaskContext);
+        // const [activeTasks, setActiveTasks] = useState(null);
+        // const [doneTasks, setDoneTasks] = useState(null);
+        // const [totalPoints, setTotalPoints] = useState(null)
 
-        const activeTasks = tasks.filter(task => task.completed === false).length;
-        const doneTasks = tasks.filter(task => task.completed ===  true ).length;
-        const totalPoints = doneTasks * 3;
-       
-        useEffect(() => {
-            setTasks(Tasks);
-              
-          }, [tasks]);
+    
 
         return (
             <Container className={styles.userContainer}>
-                <Container className={styles.profile_pic_Row}>
+                <Row className={styles.profile_pic_Row}>
                     <Col className={styles.intros}>
                         <p>
                             Welcome {user.given_name}!
@@ -30,8 +30,8 @@ const  User = () => {
                     </Col>
                     
                     
-                </Container>          
-                <Container className={styles.task_Row}>
+                </Row>          
+                <Row className={styles.task_Row}>
                         <Row className={styles.metricContainer}>
                             <Col className={styles.col_task_tracker}>
                             <p>Task Tracker</p>
@@ -56,7 +56,7 @@ const  User = () => {
                                 <p>1</p>
                             </Col>
                         </Row>                    
-                </Container>
+                </Row>
                 
                     
             </Container>

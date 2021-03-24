@@ -32,12 +32,13 @@
 }
 
 .task_Row {
-  width: 280px;
-  height: 98px;
+  width: 290px;
+  height: 100px;
   color: white;
   background-color: #44546c;
   border-radius: 10px;
   border: none;
+  justify-self: center;
   justify-content: center;
 }
 .metricContainer {
