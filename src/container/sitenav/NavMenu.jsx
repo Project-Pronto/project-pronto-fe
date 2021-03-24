@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap'
 import LogOutButton from '../../components/auth0/LogOutButton'
 import {useAuth0} from '@auth0/auth0-react'
 import styles from './NavMenu.module.css'
-import logo from '../../assets/main_logo.png'
+import logo from '../../assets/Voltooi_logo.png'
 
 export default function NavMenu()  {
     

@@ -5,14 +5,14 @@
   border: none;
   background-color: #44546c;
   margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
   justify-content: center;
 }
 .steps_button {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 280px;
+  width: 260px;
 }
 .myTask_heading {
   display: flex;
@@ -22,15 +22,18 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  width: 340px;
+  min-width: 300px;
+  height: 40px;
   padding-top: 5px;
+  justify-self: center;
   justify-content: space-between;
 }
 
 .task_heading {
+  display: grid;
   width: 300px;
-  margin: 0px;
-  padding: 0px;
+
+  justify-content: center;
 }
 
 .taskButton {
@@ -53,12 +56,32 @@
   justify-content: center;
 }
 
+.add_task_button {
+  background: #ff5c61;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+  height: 31px;
+}
+
 .myTask_container {
+  justify-items: center;
   border-radius: 10px;
   margin: 0px;
   background-color: #293547;
   border-radius: 10px;
   width: 340px;
+  min-height: 150px;
 }
 ul {
   padding-inline-start: 0px;
@@ -86,6 +109,7 @@ ul {
 
 .allTasks {
   margin-top: 5px;
+  margin-bottom: 5px;
   border-radius: 10px;
   font-family: Inter;
   font-style: normal;
@@ -93,11 +117,15 @@ ul {
   font-size: 16px;
   line-height: 19px;
   width: 280px;
+  justify-self: center;
 }
 
 .steps {
-  display: flex;
   align-items: center;
+  list-style-type: none;
+}
+.steps_ul {
+  display: grid;
 }
 
 .stepsButton {
@@ -107,7 +135,35 @@ ul {
   font-family: Inter;
   font-style: normal;
   font-weight: 800;
-  font-size: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.modal_container {
+  background: transparent;
+}
+
+.modal_body {
+  background: #293547;
+  color: white;
+}
+
+.modal_input {
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.noTasks {
   display: flex;
-  justify-self: flex-start;
+  justify-content: center;
+  align-items: center;
+}
+
+.noTasks_text {
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
 }

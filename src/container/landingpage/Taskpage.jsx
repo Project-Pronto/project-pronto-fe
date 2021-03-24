@@ -1,39 +1,54 @@
 import React, { useContext, useState } from 'react';
 import {TaskContext} from '../../context/TaskContext'
 // import React, {useState} from 'react'
-import { Container, Button, Collapse, Modal, Row, Col} from 'react-bootstrap';
+import { Container, Collapse, Modal} from 'react-bootstrap';
 // import Tasks from '../../data/Data';
 import styles from './Task.module.css';
 
 export default function TaskPage() {
-  const { tasks, handleNewTask } = useContext(TaskContext)
+  const { allTasks, handleNewTask } = useContext(TaskContext)
 
     const [open, setOpen] = useState(false);
     const [show, setShow] = useState(false);
+    const [Task1, setStepTask1] = useState(
+      {task1:"",
+      task1_completed: false}
+    );
+    const [Task2, setStepTask2] = useState(
+      {task2:"",
+      task2_completed:false}
+    );
+    const [Task3, setStepTask3] = useState(
+      {task3:"",
+      task3_completed:false}
+    );
     
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
 
   const [taskForm, setTaskForm] = useState({
-        completed: false,
-        goal:"",
-        deadline: "",
-        steps: [
-            {task: "",
-            completed: false},
-            {task:"",
-            completed:false},
-            {task:"",
-            completed: false}
-          ]
-        });
+    completed:false,
+    goal:"",
+    deadline: "",
+    steps: []
+  });
 
 
-        const handleSubmit = e => {
+        const handleSubmit = async(e) => {
           e.preventDefault();
-          handleNewTask(taskForm); 
-          console.log(tasks)     
+          await taskForm.steps.push(Task1, Task2, Task3)  
+          await handleNewTask(taskForm);
+          setStepTask1({...Task1, task1:""})
+          setStepTask2({...Task2, task2:""})
+          setStepTask3({...Task3, task3:""})
+          setTaskForm({
+            ...taskForm,
+            goal:"",
+            deadline: "",
+            steps: []
+          })
+          console.log(allTasks, taskForm, Task1,Task2, Task3 )     
         };
 
         const onChange = e => {
@@ -42,132 +57,152 @@ export default function TaskPage() {
             [e.target.name]: e.target.value
           });
         };
+
+        const onTaskChange1 = e => {
+          setStepTask1({
+            ...Task1,
+            [e.target.name]: e.target.value
+          });
+        };
+        const onTaskChange2 = e => {
+          setStepTask2({
+            ...Task2,
+            [e.target.name]: e.target.value
+          });
+        };
+        const onTaskChange3 = e => {
+          setStepTask3({
+            ...Task3,
+            [e.target.name]: e.target.value
+          });
+        };
+
+       
     
     return (
         
         
       <Container className={styles.myTask_container}>
-            <Container className={styles.task_heading}>
-                <Row >
-                  <Col className={styles.myTask_heading}>
+            <div className={styles.task_heading}>
+                <div className={styles.myTask_heading}>
+                  
                     <p>My Tasks</p>
                     <button className={styles.taskButton} onClick={handleShow}>
                       New +
                     </button>
-                  </Col>
-                </Row> 
-            </Container>
-            
-            <Container className={styles.allTasks}>
-                {tasks.map(task =>
-                <Row className={styles.task_container} key={task.goal}>
-                    <Row>
+                
+                </div> 
+                {allTasks.length === 0 ? <div className={styles.noTasks}><p className={styles.noTasks_text}>Click “New” to create your first task</p></div> : 
+          <div className={styles.allTasks}>
+                {allTasks.map(task =>
+                <div className={styles.task_container} key={task.goal}>
+                    
                       <div className={styles.goal_deadline}>
                         <p>{task.goal}</p>
                         <p>{task.deadline}</p>
                       </div>
-                    </Row>
-                    <Row className={styles.steps_button}>
+                  
+                    <div className={styles.steps_button}>
                       <p className={styles.stepsComplete}>
-                        {task.steps.filter(step => step.completed === true).length}/3 complete
+                        {task.steps.filter(step => step.task1_completed === true || step.task2_completed === true || step.task3_completed === true).length}/3 complete
                       </p>
-                      <Button
+                      <button
                         className={styles.stepsButton}
                         onClick={() => setOpen(!open)}
                         aria-controls={`task ${task.goal}`}
                         aria-expanded={open}>
-                        &#748;
-                      </Button>
-                    </Row>
-                    
-                    
+                        ^
+                      </button>
+                    </div>
                     <Collapse in={open}>
-                        <ul id={`task ${task.goal}`}>
-                            { task.steps.map(step => 
-                            <div className={styles.steps}>
-                              <input 
-                       type="checkbox" 
-                       checked={(step.completed)}>
-                       </input><p>{step.task}</p>
-                            </div>)}
+                        <ul className={styles.steps_ul}id={`task ${task.goal}`}>
+                            
+                              <li className={styles.steps}>
+                                <input 
+                                  type="checkbox" 
+                                  checked={(task.steps[0].task1_completed)}>
+                                </input><p>{task.steps[0].task1}</p>
+                                <input 
+                                  type="checkbox" 
+                                  checked={(task.steps[1].task2_completed)}>
+                                </input><p>{task.steps[1].task2}</p>
+                                <input 
+                                  type="checkbox" 
+                                  checked={(task.steps[2].task3_completed)}>
+                                </input><p>{task.steps[2].task3}</p>
+                              </li>
                         </ul>
                     </Collapse>
-                    <Modal show={show} onHide={handleClose}>
+                    
+                </div>
+                
+                )}
+                    
+                </div>}
+            </div>
+            
+
+
+
+
+            <Modal show={show} onHide={handleClose} className={styles.modal_container}>
           <Modal.Header closeButton>
             <Modal.Title>Add Task</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className={styles.modal_body}>
             <form onSubmit={handleSubmit}>
-              <label
-                htmlFor="goal">
-                Goal:
-              </label>
               <input
                 id="goal"
                 type="text"
                 name="goal"
                 value={taskForm.goal}
-                onChange={onChange}/>
-
-              <label htmlFor="subtask1">
-                Subtask:
-              </label>
+                onChange={onChange}
+                className={styles.modal_input}
+                placeholder="Add task description/name"/>
+                <h5>Task Breakdown</h5>
               <input
                 id="subtask1"
                 type="text"
                 name="task1"
-                value={taskForm.steps[0].task}
-                onChange={onChange}
+                value={Task1.task1}
+                onChange={onTaskChange1}
+                className={styles.modal_input}
+                placeholder="Subtask"
               />
-              <label htmlFor="subtask2">
-                      Subtask:
-                    </label>
-                    <input
-                      id="subtask2"
-                      type="text"
-                      name="task2"
-                      value={taskForm.steps[1].task}
-                      onChange={onChange}
-                    />
-
-              <label htmlFor="subtask3">
-                    Subtask:
-                  </label>
-                  <input
-                    id="subtask3"
-                    type="text"
-                    name="task3"
-                    value={taskForm.steps[2].task}
-                    onChange={onChange}
-                  />
-
-              <label htmlFor="deadline">
-                Deadline:
-              </label>
+              <input
+                id="subtask2"
+                type="text"
+                name="task2"
+                value={Task2.task2}
+                onChange={onTaskChange2}
+                className={styles.modal_input}
+                placeholder="Subtask"
+              />
+              <input
+                id="subtask3"
+                type="text"
+                name="task3"
+                value={Task3.task3}
+                onChange={onTaskChange3}
+                className={styles.modal_input}
+                placeholder="Subtask"
+              />
               <input
                 id="deadline"
                 type="date"
                 name="deadline"
                 value={taskForm.deadline}
                 onChange={onChange}
+                className={styles.modal_input}
+                placeholder="Date"
               />
-              <button>Create Journal Entry</button> 
+              <br></br>
+              <button className={styles.add_task_button} onClick={handleClose}>Save</button> 
             </form>
             </Modal.Body>
-            <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-            Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-            Close Window
-          </Button>
-          </Modal.Footer>
           </Modal> 
-                </Row>
-                
-                )}
-                    
-                </Container>
+
+          
             
             
             
