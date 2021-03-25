@@ -3,6 +3,9 @@
 .Nav {
   height: 70px;
   background-color: #19222f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .NavText {
@@ -21,7 +24,6 @@
 }
 
 .logo {
-  position: absolute;
-  top: 0%;
-  width: 45%;
+  /* width: 45%; */
+  height: 70%;
 }

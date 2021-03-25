@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import TaskPage from '../landingpage/Taskpage';
 import logo from '../../assets/Voltooi_logo.png'
 import LoginButton from '../../components/auth0/LoginButton';
-import Loading from '../../assets/loading.gif';
+import Loading from '../../assets/voltooi_loading.gif';
 
 
 export default function HomePage() {
