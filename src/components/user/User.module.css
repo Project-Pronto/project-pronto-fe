@@ -95,12 +95,12 @@
 }
 
 .col_task_tracker {
-  justify-self: flex-start;
+  display: flex;
+  align-items: center;
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
 }
 
 .col_task_points {

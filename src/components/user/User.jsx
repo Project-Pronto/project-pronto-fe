@@ -26,7 +26,7 @@ const  User = () => {
                             Welcome {user.given_name}!
                        <br></br>
         
-                        You have pending tasks
+                        You have {activeTasks} pending tasks
                         </p> 
                     </Col>
                     
