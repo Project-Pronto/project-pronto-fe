@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap'
 import LogOutButton from '../../components/auth0/LogOutButton'
 import {useAuth0} from '@auth0/auth0-react'
 import styles from './NavMenu.module.css'
@@ -12,12 +11,12 @@ export default function NavMenu()  {
 <>
 
 
-          { isAuthenticated ? <Navbar className={styles.Nav} collapseOnSelect expand="lg"  variant="dark">
-              <Navbar.Brand className={styles.NavText} href="/">
+          { isAuthenticated ? <div className={styles.Nav} >
+              
               <img className={styles.logo} src={logo} alt="logo"/><LogOutButton/>
-              </Navbar.Brand>
+             
   
-            </Navbar> : <></>}
+            </div> : <></>}
 
             </>
             
