@@ -167,6 +167,10 @@ ul {
   background: transparent;
   color: white;
   border: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .modal_input:focus {
@@ -174,6 +178,10 @@ ul {
   color: white;
   border: none;
   outline: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .noTasks {
