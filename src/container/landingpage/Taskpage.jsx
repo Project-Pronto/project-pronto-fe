@@ -77,10 +77,6 @@ export default function TaskPage() {
           });
         };
 
-        const onChangeComplete = e => {
-          
-        }
-
        
     
     return (
@@ -123,18 +119,15 @@ export default function TaskPage() {
                             
                               <li className={styles.steps}>
                                 <input 
-                                  onChange={onChangeComplete}
                                   type="checkbox" 
                                   checked={(task.steps[0].task1_completed)}>
                                 </input><p>{task.steps[0].task1}</p>
-                                <input
-                                  onChange={onChangeComplete}
+                                <input 
                                   type="checkbox" 
                                   checked={(task.steps[1].task2_completed)}>
                                 </input><p>{task.steps[1].task2}</p>
                                 <input 
-                                  type="checkbox"
-                                  onChange={onChangeComplete} 
+                                  type="checkbox" 
                                   checked={(task.steps[2].task3_completed)}>
                                 </input><p>{task.steps[2].task3}</p>
                               </li>
