@@ -3,7 +3,7 @@ import {TaskContext} from '../../context/TaskContext'
 
 // import React, { useState, useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import styles from './User.module.css';
 // import Tasks from '../../data/Data'
 
@@ -19,20 +19,21 @@ const  User = () => {
     
 
         return (
-            <Container className={styles.userContainer}>
-                <Row className={styles.profile_pic_Row}>
+            <div className={styles.userContainer}>
+                <div className={styles.profile_pic_Row}>
                     <Col className={styles.intros}>
                         <p>
                             Welcome {user.given_name}!
                        <br></br>
+        
                         You have pending tasks
                         </p> 
                     </Col>
                     
                     
-                </Row>          
-                <Row className={styles.task_Row}>
-                        <Row className={styles.metricContainer}>
+                </div>          
+                <div className={styles.task_Row}>
+                        <div className={styles.metricContainer}>
                             <Col className={styles.col_task_tracker}>
                             <p>Task Tracker</p>
                             
@@ -41,8 +42,8 @@ const  User = () => {
                             
                             <p>{totalPoints}pts</p>                            
                             </Col>
-                        </Row>
-                        <Row>
+                        </div>
+                        <div className={styles.metricContainer}>
                             <Col className={styles.col_active}>
                                 <p>Active</p>
                                 <p>{activeTasks}</p>
@@ -55,11 +56,11 @@ const  User = () => {
                                 <p>Missed</p>
                                 <p>1</p>
                             </Col>
-                        </Row>                    
-                </Row>
+                        </div>                    
+                </div>
                 
                     
-            </Container>
+            </div>
         )
     }
 
