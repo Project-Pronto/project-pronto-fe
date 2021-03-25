@@ -155,6 +155,7 @@ export default function TaskPage() {
                 id="goal"
                 type="text"
                 name="goal"
+                autocomplete="off"
                 value={taskForm.goal}
                 onChange={onChange}
                 className={styles.modal_input}
@@ -167,6 +168,7 @@ export default function TaskPage() {
                 id="subtask1"
                 type="text"
                 name="task1"
+                autocomplete="off"
                 value={Task1.task1}
                 onChange={onTaskChange1}
                 className={styles.modal_input}
@@ -176,6 +178,7 @@ export default function TaskPage() {
                 id="subtask2"
                 type="text"
                 name="task2"
+                autocomplete="off"
                 value={Task2.task2}
                 onChange={onTaskChange2}
                 className={styles.modal_input}
@@ -185,6 +188,7 @@ export default function TaskPage() {
                 id="subtask3"
                 type="text"
                 name="task3"
+                autocomplete="off"
                 value={Task3.task3}
                 onChange={onTaskChange3}
                 className={styles.modal_input}

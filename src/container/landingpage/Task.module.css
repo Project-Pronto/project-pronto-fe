@@ -169,6 +169,13 @@ ul {
   border: none;
 }
 
+.modal_input:focus {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+
 .noTasks {
   display: flex;
   justify-content: center;
