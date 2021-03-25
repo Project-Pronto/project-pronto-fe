@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import {TaskContext} from '../../context/TaskContext'
 // import React, {useState} from 'react'
-import { Container, Collapse, Modal} from 'react-bootstrap';
+import { Collapse, Modal} from 'react-bootstrap';
 // import Tasks from '../../data/Data';
 import styles from './Task.module.css';
 
@@ -82,7 +82,7 @@ export default function TaskPage() {
     return (
         
         
-      <Container className={styles.myTask_container}>
+      <div className={styles.myTask_container}>
             <div className={styles.task_heading}>
                 <div className={styles.myTask_heading}>
                   
@@ -146,7 +146,7 @@ export default function TaskPage() {
 
 
             <Modal show={show} onHide={handleClose} className={styles.modal_container}>
-          <Modal.Header closeButton>
+          <Modal.Header className={styles.modal_header} closeButton>
             <Modal.Title>Add Task</Modal.Title>
           </Modal.Header>
           <Modal.Body className={styles.modal_body}>
@@ -159,6 +159,9 @@ export default function TaskPage() {
                 onChange={onChange}
                 className={styles.modal_input}
                 placeholder="Add task description/name"/>
+                <br></br>
+                <br></br>
+                <br></br>
                 <h5>Task Breakdown</h5>
               <input
                 id="subtask1"
@@ -187,6 +190,8 @@ export default function TaskPage() {
                 className={styles.modal_input}
                 placeholder="Subtask"
               />
+              <br></br>
+              <br></br>
               <input
                 id="deadline"
                 type="date"
@@ -197,9 +202,12 @@ export default function TaskPage() {
                 placeholder="Date"
               />
               <br></br>
+              <br></br>
               <button className={styles.add_task_button} onClick={handleClose}>Save</button> 
             </form>
             </Modal.Body>
+           
+
           </Modal> 
 
           
@@ -208,7 +216,7 @@ export default function TaskPage() {
             
 
             
-      </Container>            
+      </div>            
         
         
     )

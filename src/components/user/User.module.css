@@ -6,22 +6,20 @@
   justify-content: center;
 }
 .userContainer {
+  margin-top: 15px;
   display: grid;
   width: 340px;
   height: 202px;
   align-self: center;
   border: none;
   border-radius: 10px;
-  margin: 5px;
-  padding: 3px;
   background-color: #293547;
-  justify-content: center;
+  justify-self: center;
 }
 
 .intros {
   width: 280px;
   display: grid;
-  padding-top: 2%;
   font-family: Inter;
   font-style: normal;
   font-weight: 700;
@@ -29,6 +27,7 @@
   line-height: 24px;
   justify-self: center;
   color: #ffffff;
+  margin-top: 15px;
 }
 
 .task_Row {
@@ -39,12 +38,12 @@
   border-radius: 10px;
   border: none;
   justify-self: center;
-  justify-content: center;
+  align-content: center;
 }
 .metricContainer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid white;
   font-family: Inter;
   font-style: normal;
   font-weight: 400;

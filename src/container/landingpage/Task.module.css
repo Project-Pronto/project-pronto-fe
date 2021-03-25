@@ -24,7 +24,7 @@
   line-height: 24px;
   min-width: 300px;
   height: 40px;
-  padding-top: 5px;
+  margin-top: 15px;
   justify-self: center;
   justify-content: space-between;
 }
@@ -32,7 +32,7 @@
 .task_heading {
   display: grid;
   width: 300px;
-
+  grid-template-rows: 1fr 1fr;
   justify-content: center;
 }
 
@@ -75,13 +75,14 @@
 }
 
 .myTask_container {
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   border-radius: 10px;
   margin: 0px;
   background-color: #293547;
   border-radius: 10px;
   width: 340px;
-  min-height: 150px;
+  min-height: 175px;
 }
 ul {
   padding-inline-start: 0px;
@@ -141,11 +142,24 @@ ul {
 
 .modal_container {
   background: transparent;
+  border-radius: 10px;
 }
 
 .modal_body {
   background: #293547;
   color: white;
+  border: none;
+}
+.modal_header {
+  background: #293547;
+  color: white;
+  border: none;
+}
+
+.footer {
+  background: #293547;
+  color: white;
+  border: none;
 }
 
 .modal_input {
