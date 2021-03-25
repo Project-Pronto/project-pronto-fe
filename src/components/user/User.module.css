@@ -112,3 +112,11 @@
   font-size: 12px;
   line-height: 14px;
 }
+
+.data_text {
+  color: white;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+}
