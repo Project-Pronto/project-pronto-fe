@@ -26,7 +26,7 @@ const  User = () => {
                             Welcome {user.given_name}!
                        <br></br>
         
-                        You have pending tasks
+                        You have {activeTasks} pending tasks
                         </p> 
                     </Col>
                     
@@ -35,26 +35,26 @@ const  User = () => {
                 <div className={styles.task_Row}>
                         <div className={styles.metricContainer}>
                             <Col className={styles.col_task_tracker}>
-                            <p>Task Tracker</p>
+                            <p className={styles.data_text}>Task Tracker</p>
                             
                             </Col>
                             <Col className={styles.col_task_points}>
                             
-                            <p>{totalPoints}pts</p>                            
+                            <p className={styles.data_text}>{totalPoints}pts</p>                            
                             </Col>
                         </div>
                         <div className={styles.metricContainer}>
                             <Col className={styles.col_active}>
-                                <p>Active</p>
-                                <p>{activeTasks}</p>
+                                <p className={styles.data_text}>Active</p>
+                                <p className={styles.data_text}>{activeTasks}</p>
                             </Col>
                             <Col className={styles.col_done}>
-                                <p>Done</p>
-                                <p>{doneTasks}</p>
+                                <p className={styles.data_text}>Done</p>
+                                <p className={styles.data_text}>{doneTasks}</p>
                             </Col>
                             <Col className={styles.col_missed}>
-                                <p>Missed</p>
-                                <p>1</p>
+                                <p className={styles.data_text}>Missed</p>
+                                <p className={styles.data_text}>1</p>
                             </Col>
                         </div>                    
                 </div>
