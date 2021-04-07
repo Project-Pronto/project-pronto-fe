@@ -36,9 +36,8 @@ export default function TaskPage() {
 
 
         const handleSubmit = async(e) => {
-          e.preventDefault();
-          await taskForm.steps.push(Task1, Task2, Task3)  
-          await handleNewTask(taskForm);
+          e.preventDefault();  
+          await handleNewTask(taskForm, Task1, Task2, Task3);
           setStepTask1({...Task1, task1:""})
           setStepTask2({...Task2, task2:""})
           setStepTask3({...Task3, task3:""})
@@ -86,7 +85,7 @@ export default function TaskPage() {
             <div className={styles.task_heading}>
                 <div className={styles.myTask_heading}>
                   
-                    <p>My Tasks</p>
+                    <p>My Tasks Hello</p>
                     <button className={styles.taskButton} onClick={handleShow}>
                       New +
                     </button>
@@ -155,7 +154,7 @@ export default function TaskPage() {
                 id="goal"
                 type="text"
                 name="goal"
-                autocomplete="off"
+                autoComplete="off"
                 value={taskForm.goal}
                 onChange={onChange}
                 className={styles.modal_input}
@@ -168,7 +167,7 @@ export default function TaskPage() {
                 id="subtask1"
                 type="text"
                 name="task1"
-                autocomplete="off"
+                autoComplete="off"
                 value={Task1.task1}
                 onChange={onTaskChange1}
                 className={styles.modal_input}
@@ -178,7 +177,7 @@ export default function TaskPage() {
                 id="subtask2"
                 type="text"
                 name="task2"
-                autocomplete="off"
+                autoComplete="off"
                 value={Task2.task2}
                 onChange={onTaskChange2}
                 className={styles.modal_input}
@@ -188,7 +187,7 @@ export default function TaskPage() {
                 id="subtask3"
                 type="text"
                 name="task3"
-                autocomplete="off"
+                autoComplete="off"
                 value={Task3.task3}
                 onChange={onTaskChange3}
                 className={styles.modal_input}
